@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Questions from '../components/Questions'
+import { useSelector } from 'react-redux'
 
 const Quiz = () => {
+  //redux store
+  const state = useSelector(state => state)
 
+  useEffect(() => console.log('Slice', state))
+
+
+  // Prev and Next button onClick
   const onNext = () => {
     console.log('on next click')
   }
